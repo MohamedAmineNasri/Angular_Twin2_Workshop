@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'testangular';
+  title = 'Interpolation';
+  val1="Property Binding";
+  chaine1= "first";
+  chaine2= "vvvv";
+    test(ch:string){
+      alert("eventbinding"+ch)
+    }
+    getVal(x:string){
+      this.chaine1;
+    }
 }
