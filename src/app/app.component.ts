@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  //injecter le service userService
+  constructor(private us: UserService){
+
+  }
+
   title = 'Interpolation';
   val1="Property Binding";
   chaine1= "first";

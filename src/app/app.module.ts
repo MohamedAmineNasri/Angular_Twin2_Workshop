@@ -11,6 +11,7 @@ import { AccountsComponent } from './user/components/accounts/accounts.component
 import { FooterComponent } from './footer/footer.component';
 import { ListUserComponent } from './user/components/list-user/list-user.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule, //ngFor/ngUf
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent, TestComponent],
