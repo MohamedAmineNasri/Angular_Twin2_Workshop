@@ -17,6 +17,7 @@ export class ListUserComponent {
   constructor(private ac: ActivatedRoute,private us:UserService) {
     console.log('constactor');
     console.log('je suis serive baby');
+    
   }
 
   //method hook qui fait partie du cycle de vie d'un composant
