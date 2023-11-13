@@ -1,4 +1,5 @@
-<form [formGroup]="myForm"> <!-- a3mil immport lil ReactiveFormsModule fih modules mta3ik ili howa lina user.modules.ts -->
+<h1>Reactive form</h1>
+<form [formGroup]="myForm" (submit)="addUser()"> <!-- a3mil immport lil ReactiveFormsModule fih modules mta3ik ili howa lina user.modules.ts -->
   <div formGroupName="groupe1">
   FirstName : <input type="text" formControlName="first"><br>
   <div *ngIf="myForm.get('groupe1').get('first').touched && myForm.get('groupe1').get('first').invalid">
@@ -18,7 +19,7 @@
   <button [disabled]="myForm.invalid">Save</button>
 </form>
 
-<!-- Reactive form 
+<!-- Reactive form
   -myForm : FormGroup <-> <form>
   -FormControl <-> <input>
   contrat de saisir lakthariya synchrome

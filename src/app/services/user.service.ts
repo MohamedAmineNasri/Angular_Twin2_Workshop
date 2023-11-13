@@ -12,11 +12,17 @@ export class UserService {
   constructor(private _http: HttpClient) {
     console.log('je suis un service ya bro');
   }
-  getUserFromOb():Observable<User[]> {
-    return this._http.get<User[]>('http://localhost:3000/users');//get,post,.... lkolha type de retoure observable<object>
+  getUserFromOb(): Observable<User[]> {
+    return this._http.get<User[]>('http://localhost:3000/users'); //get,post,.... lkolha type de retoure observable<object>
   }
-  addUser(user:User):Observable<User> {
-    return this._http.post<User>('http://localhost:3000/users',user);//get,post,.... lkolha type de retoure observable<object>
+  getUser(id: number): Observable<User> {
+    return this._http.get<User>('http://localhost:3000/users/' + id);
+  }
+  addUser(user: User): Observable<User> {
+    return this._http.post<User>('http://localhost:3000/users', user); //get,post,.... lkolha type de retoure observable<object>
+  }
+  updateUser(user: User): Observable<User> {
+    return this._http.put<User>('http://localhost:3000/users/' + user.id, user);
   }
   getAllUsers() {
     return [
